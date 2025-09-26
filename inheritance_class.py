@@ -1,23 +1,23 @@
 # Inheritance
 
-class Veicle:
+class Vehicle:
     def __init__ ( self,brand, model, year):
         self.brand = brand
         self.model = model
         self.year = year
 
     def start(self):
-        print("Veichle is starting.")
+        print("Vehicle is starting.")
     def stop(self):
-        print("Veichle is stopping.")
+        print("Vehicle is stopping.")
 
-class Car(Veicle):
+class Car(Vehicle):
     def __init__(self, brand,model,year,number_of_doors, number_of_wheels):
         super().__init__(brand,model,year)
         self.number_of_doors = number_of_doors
         self.number_of_wheels = number_of_wheels
 
-class Bike(Veicle):
+class Bike(Vehicle):
     def __init__(self, brand,model,year,number_of_wheels):
         super().__init__(brand,model,year)
         self.number_of_wheels = number_of_wheels
